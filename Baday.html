@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Birthday Invitation</title>
+  <style>
+    body {
+      font-family: 'Arial';
+      background-color: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .click-box {
+      padding: 20px 30px;
+      background-color: #ff66b2;
+      color: white;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .click-box:hover {
+      background-color: #e60073;
+    }
+
+    .card {
+      margin-top: 30px;
+      background-color: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-width: 400px;
+      text-align: center;
+      display: none;
+    }
+
+    .card h2 {
+      color: #ff3399;
+    }
+    .card h1 {
+      color: #ff0066;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clickable area -->
+  <div class="click-box" onclick="showInvitation()">
+    🎂 Click here to reveal the birthday invitation of <span style="text-decoration: underline;">Ayush</span>
+  </div>
+
+  <!-- Hidden birthday card -->
+  <div class="card" id="inviteCard">
+    <h2>You're Invited! 🎉</h2>
+    <p>Come join us in celebrating the birthday of</p>
+    <h1>💖 Ayush Rai 💖</h1>
+    <p>🎈 On: 8th August 2025</p>
+    <p>📍 Venue: Royal Celebration In My House</p>
+    <p>⏰ Time: 6:30 PM onwards</p>
+    <p>Don’t miss the fun, food & cake! 🎂</p>
+  </div>
+
+  <script>
+    function showInvitation() {
+      document.querySelector('.click-box').style.display = 'none';
+      document.getElementById('inviteCard').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
